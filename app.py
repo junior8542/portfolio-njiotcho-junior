@@ -227,14 +227,14 @@ def send_contact():
             body=f"De: {name} <{email}>\n\n{message}"
         )
         
-            mail.send(msg)
+        mail.send(msg)
         
         return jsonify({
             'success': True,
             'message': 'Message envoyé avec succès ! Je vous répondrai bientôt.'
         })
         
-        except Exception as e:
+    except Exception as e:
         return jsonify({
             'error': 'Erreur lors de l\'envoi du message. Veuillez réessayer plus tard.',
             'details': str(e)
