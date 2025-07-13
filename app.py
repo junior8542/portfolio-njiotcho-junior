@@ -1,6 +1,6 @@
 # Portfolio API - NJIOTCHO JUNIOR
 # Version: 1.0.0 - Ready for deployment
-from flask import Flask, request, jsonify
+gitfrom flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_mail import Mail, Message
 import os
