@@ -1,3 +1,5 @@
+# Portfolio API - NJIOTCHO JUNIOR
+# Version: 1.0.0 - Ready for deployment
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_mail import Mail, Message
@@ -227,14 +229,14 @@ def send_contact():
             body=f"De: {name} <{email}>\n\n{message}"
         )
         
-            mail.send(msg)
+        mail.send(msg)
         
         return jsonify({
             'success': True,
             'message': 'Message envoyé avec succès ! Je vous répondrai bientôt.'
         })
         
-        except Exception as e:
+    except Exception as e:
         return jsonify({
             'error': 'Erreur lors de l\'envoi du message. Veuillez réessayer plus tard.',
             'details': str(e)
