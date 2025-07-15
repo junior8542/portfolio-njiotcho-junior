@@ -1,6 +1,6 @@
 # Portfolio API - NJIOTCHO JUNIOR
 # Version: 1.0.0 - Ready for deployment
-gitfrom flask import Flask, request, jsonify
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_mail import Mail, Message
 import os
@@ -10,7 +10,12 @@ app = Flask(__name__)
 app.secret_key = 'votre_cle_secrete_ici'  # Changez ceci en production
 
 # Configuration CORS pour permettre les requêtes depuis le frontend React
-CORS(app, origins=['http://localhost:3000', 'http://127.0.0.1:3000'])
+CORS(app, origins=[
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+    'http://localhost:3001',
+    'http://127.0.0.1:3001'
+])
 
 # Configuration
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
@@ -21,7 +26,7 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'juniornjiotcho@gmail.com'  # Remplacez par votre email
-app.config['MAIL_PASSWORD'] = 'juniorlion8542' # Mot de passe d'application Gmail
+app.config['MAIL_PASSWORD'] = 'xqoh yayb pbaf hhos' # Mot de passe d'application Gmail
 
 mail = Mail(app)
 
@@ -51,6 +56,12 @@ portfolio_data = {
                 'company': 'Enset_Douala',
                 'period': '2024 - 2025',
                 'description': 'API REST avec Flask et bases de données PostgreSQL'
+            },
+            {
+                'title': 'Charger des projets Club informatique',
+                'company': 'Enset_Douala',
+                'period': '2023 - 2025',
+                'description': 'Coordonnes les activites du Club, Robotique,Domotique,Developpement Web...'
             }
         ],
         'education': [
@@ -61,12 +72,12 @@ portfolio_data = {
             },
             {
                 'degree': 'DIPET1',
-                'school': "École Normale d'Enseignement Technique",
+                'school': "École Normale Superieure  d'Enseignement Technique",
                 'year': '2026'
             },
             {
                 'degree': 'Licence Technologique (Automatisme)',
-                'school': "École Normale d'Enseignement Technique / Université De Douala",
+                'school': "École Normale  Superieure d'Enseignement Technique / Université De Douala",
                 'year': '2026'
             },
             {
@@ -95,7 +106,7 @@ portfolio_data = {
             'description': 'Une application web Flask pour la gestion des élections présidentielles au Cameroun..',
             'technologies': ['Python', 'Flask', 'PostgreSQL', 'Stripe', 'Bootstrap','Vercel'],
             'image': 'project1.jpg',
-            'github': 'https://github.com/junior8542/project1',
+            'github': 'https://github.com/junior8542/Calculatrice',
             'demo': 'https://demo-project1.com',
             'featured': True
         },
@@ -105,7 +116,7 @@ portfolio_data = {
             'description': 'Implementation d\'un robot suiveur de ligne et application de contrôle.',
             'technologies': ['Arduino','Proteus'],
             'image': 'project2.jpg',
-            'github': 'https://github.com/junior8542/project2',
+            'github': 'https://github.com/junior8542/gimfo_app',
             'demo': 'https://demo-project2.com',
             'featured': True
         },
@@ -115,7 +126,7 @@ portfolio_data = {
             'description': 'logo de ma plateforme de troc nommé : PmExchange réalisé avec photoshop et illustrator.',
             'technologies': ['Photoshop','Illustrator'],
             'image': 'project3.jpg',
-            'github': 'https://github.com/junior8542/project3',
+            'github': 'https://github.com/junior8542/phhotoshop1',
             'demo': 'https://demo-project3.com',
             'featured': False
         },
@@ -124,7 +135,7 @@ portfolio_data = {
             'title': 'PmExchange - Plateforme d\'échange de biens et services',
             'description': 'Plateforme web innovante permettant l\'échange de biens et services entre utilisateurs. Système de notation, messagerie intégrée, géolocalisation et paiements sécurisés.',
             'technologies': ['React', 'Node.js', 'MongoDB', 'Express.js', 'Socket.io', 'Stripe', 'Google Maps API'],
-            'image': 'project4.jpg',
+            'image': 'project3.jpg',
             'github': 'https://github.com/junior8542/pmexchange',
             'demo': 'https://pmexchange-demo.com',
             'featured': True
@@ -134,8 +145,18 @@ portfolio_data = {
             'title': 'Serveur de messagerie ZIMBRA - Déploiement et configuration',
             'description': 'Déploiement complet d\'un serveur de messagerie d\'entreprise avec ZIMBRA. Configuration des services email, calendrier, contacts et collaboration. Mise en place de la sécurité et sauvegarde automatisée.',
             'technologies': ['ZIMBRA', 'Linux', 'Docker', 'PostgreSQL', 'Nginx', 'SSL/TLS', 'Bash Scripting'],
-            'image': 'project5.jpg',
+            'image': 'project4.jpg',
             'github': 'https://github.com/junior8542/zimbra-server',
+            'demo': 'https://mail.company-demo.com',
+            'featured': True
+        },
+        {
+            'id': 6,
+            'title': 'Bras Robotique',
+            'description': 'Bras robot developpe au laboratoire de genie informatique de l\'enset',
+            'technologies': ['Arduino', 'Matlab', 'Flutter', 'PostgreSQL', 'MAterialUi', 'Bash Scripting'],
+            'image': 'project5.jpg',
+            'github': 'https://github.com/junior8542/Robot-arduino',
             'demo': 'https://mail.company-demo.com',
             'featured': True
         }
@@ -145,13 +166,13 @@ portfolio_data = {
         'linkedin': 'https://linkedin.com/in/junior-njiotcho-58581228b',
         'twitter': 'https://twitter.com/njiotcho_junior',
         'instagram': 'https://instagram.com/njiotcho_junior',
-        'facebook': 'https://facebook.com/njiotcho.junior',
-        'youtube': 'https://youtube.com/@juniornjiotcho9716',
+        'facebook': 'https://web.facebook.com/me/',
+        'youtube': 'www.youtube.com/@juniornjiotcho9716',
         'discord': 'https://discord.gg/njiotcho',
-        'telegram': 'https://t.me/njiotcho_junior'
+        'telegram': 'https://t.me/juniorpm8542'
     }
-}
 
+}
 # Routes API
 
 @app.route('/api/health')
@@ -237,6 +258,8 @@ def send_contact():
         })
         
     except Exception as e:
+        import traceback
+        traceback.print_exc()  # Affiche l'erreur complète dans le terminal
         return jsonify({
             'error': 'Erreur lors de l\'envoi du message. Veuillez réessayer plus tard.',
             'details': str(e)
@@ -295,6 +318,4 @@ if __name__ == '__main__':
     
     # Configuration pour le déploiement
     port = int(os.environ.get('PORT', 5000))
-    debug = os.environ.get('FLASK_ENV') == 'development'
-    
-    app.run(debug=debug, host='0.0.0.0', port=port) 
+    app.run(debug=True, host='0.0.0.0', port=port) 
