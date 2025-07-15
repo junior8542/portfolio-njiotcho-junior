@@ -55,7 +55,19 @@ portfolio_data = {
                 'title': 'Développeur Backend',
                 'company': 'Enset_Douala',
                 'period': '2024 - 2025',
-                'description': 'API REST avec Flask et bases de données PostgreSQL'
+                'description': 'API REST avec Flask et bases de données PostgreSQL de la Bibiothèque'
+            },
+             {
+                'title': 'Certifié',
+                'company': 'Alison',
+                'period': '2022 - 2025',
+                'description': 'Manage drone, python for all'
+            },
+            {
+                'title': 'Attestation de formation',
+                'company': 'PIPRM',
+                'period': '2021 - 2022',
+                'description': 'Assistant Rh & Bureautique'
             },
             {
                 'title': 'Charger des projets Club informatique',
@@ -94,6 +106,11 @@ portfolio_data = {
                 'degree': 'BEPC ',
                 'school': "Lycée Bilingue de Balengou ",
                 'year': '2014'
+            },
+             {
+                'degree': 'CEPE ',
+                'school': "Ecole Catholique Saint Jean De Ngongsamba ",
+                'year': '2011'
             },
             
             
