@@ -13,8 +13,8 @@ app.secret_key = 'votre_cle_secrete_ici'  # Changez ceci en production
 CORS(app, origins=[
     'http://localhost:3000',
     'http://127.0.0.1:3000',
-    'http://localhost:3001',
-    'http://127.0.0.1:3001'
+    'https://portfolio-frontend-i2skx14nl-junior8542s-projects.vercel.app',
+    'https://portfolio-frontend-i8gl6f46r-junior8542s-projects.vercel.app',
 ])
 
 # Configuration
