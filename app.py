@@ -15,6 +15,9 @@ CORS(app, origins=[
     'http://127.0.0.1:3000',
     'https://portfolio-frontend-i2skx14nl-junior8542s-projects.vercel.app',
     'https://portfolio-frontend-i8gl6f46r-junior8542s-projects.vercel.app',
+    'https://portfolio-frontend-five-teal.vercel.app',
+    'https://portfolio-frontend-maxymti4r-junior8542s-projects.vercel.app',
+    'https://portfolio-frontend-833yywq6g-junior8542s-projects.vercel.app',
 ])
 
 # Configuration
